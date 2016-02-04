@@ -9,6 +9,10 @@ deploy:
   box: appropriate/curl
   steps:
     - script:
+        name: debug
+        code: |
+          env
+    - script:
         name: trigger docker hub build
         code: |
           curl -H "Content-Type: application/json" \
