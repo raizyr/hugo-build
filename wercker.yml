@@ -11,10 +11,6 @@ deploy:
     cmd: /bin/sh
   steps:
     - script:
-        name: debug
-        code: |
-          env
-    - script:
         name: trigger docker hub build
         code: |
           curl -H "Content-Type: application/json" \
