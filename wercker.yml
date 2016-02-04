@@ -1,9 +1,7 @@
-box: node
+box: projectatomic/dockerfile-lint
 build:
   steps:
-    - wercker/npm-install:
-        options: "validate-dockerfile -g"
     - script:
-       name: validate dockerfile
+       name: dockerfile linter
        code: |
-         docklint
+         dockerfile_lint -f Dockerfile
